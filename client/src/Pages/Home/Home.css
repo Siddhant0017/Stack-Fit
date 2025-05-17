@@ -1,0 +1,42 @@
+/* Home page layout styling */
+.home-section {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+  min-height: 90vh;
+}
+
+/* Make Records component take up more space than the form */
+.home-section > :first-child {
+  flex: 2;
+}
+
+/* Form component styling */
+.home-section > :last-child {
+  flex: 1;
+  min-width: 300px;
+}
+
+/* Responsive layout for smaller screens */
+@media (max-width: 992px) {
+  .home-section {
+    flex-direction: column-reverse;
+    padding: 1.5rem;
+  }
+  
+  .home-section > :first-child,
+  .home-section > :last-child {
+    width: 100%;
+  }
+}
+
+/* Additional styling for better spacing on mobile */
+@media (max-width: 576px) {
+  .home-section {
+    padding: 1rem;
+    gap: 1.5rem;
+  }
+}
